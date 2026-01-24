@@ -1,1 +1,0 @@
-Design notes and documentation.
