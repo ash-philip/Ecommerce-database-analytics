@@ -1,38 +1,87 @@
-# E-commerce Database Design and SQL Analytics (Brasimart)
+# Brasimart E-Commerce Analytics (Azure SQL + Python)
+
 ## Overview
 
-This project demonstrates relational database design and SQL-based analytics for a simulated e-commerce platform. It showcases schema modeling, data integrity design, and analytical queries to support business decision making.
+This project simulates a production-grade analytics workflow using the public OLIST Brazilian e-commerce dataset. Transactional data was loaded into Azure SQL and analyzed using Python to generate business insights across revenue performance, customer behavior, retention, and operational efficiency.
 
-## Business Use Case
+The objective was to transform raw transactional data into actionable business intelligence using a structured analytics pipeline.
 
-E-commerce platforms require structured transactional data to understand customer behavior, product performance, and operational metrics. This project simulates a production-ready database system and analytics layer for such a platform.
+---
 
-## Database Design
+## Architecture
 
-The relational schema models core entities including:
+Data Source → Azure SQL Database → Python (Pandas) → Analytics Fact Table → Business Insights
 
-	•	Customers
-	•	Products
-	•	Orders and order items
-	•	Payments
-	•	Shipping and logistics
+- Data Storage: Azure SQL
+- Authentication: Microsoft Entra ID (token-based via Azure CLI)
+- Analytics & Modeling: Python (Pandas, NumPy)
+- Visualization: Matplotlib, Seaborn
+- Version Control: Git & GitHub
 
-The schema follows normalization principles to reduce redundancy and ensure data integrity.
+---
 
-## Analytics Questions Addressed
-	•	What are the top-selling products and categories?
-	•	Who are the highest value customers (CLV)?
-	•	How does revenue change over time?
-	•	What is the average order value and customer retention?
+## Key Analyses
 
-## Tools
-	•	SQL
-	•	Tableau
-	•	ER modeling tools
-	•	GitHub
+### Revenue Trend Analysis
+- Evaluated monthly revenue growth patterns
+- Identified seasonality and revenue expansion trends
 
-## Status
+### Customer Lifetime Value (CLV)
+- Calculated lifetime spend per customer
+- Identified strong revenue concentration among top customers
+- Demonstrated Pareto-like revenue distribution
 
-Originally developed for MSBA coursework and extended as a portfolio analytics engineering project.
+### Cohort Retention Analysis
+- Grouped customers by first purchase month
+- Measured retention decay over time
+- Identified limited repeat purchase behavior
 
-  
+### RFM Segmentation
+- Segmented customers by Recency, Frequency, and Monetary value
+- Identified high-value and at-risk segments
+- Quantified behavioral differences across segments
+
+### Operational Performance
+- Measured delivery delay relative to estimated delivery dates
+- Found majority of deliveries occurred earlier than promised
+- Identified satisfaction impact of late deliveries
+
+### Product & Category Insights
+- Analyzed revenue concentration across product categories
+- Compared category-level revenue vs customer satisfaction
+- Highlighted potential optimization opportunities
+
+---
+
+## Business Insights
+
+- Revenue is highly concentrated among a small subset of customers.
+- Customer retention declines sharply after initial purchase.
+- Delivery reliability significantly influences customer satisfaction.
+- High-revenue categories do not always align with highest review scores.
+- Strategic retention of high-value segments could materially improve profitability.
+
+---
+
+## Skills Demonstrated
+
+- SQL data modeling and table design
+- Secure Azure SQL connectivity using Microsoft Entra authentication
+- Fact table construction and feature engineering
+- Customer analytics (CLV, RFM, Cohort analysis)
+- Operational performance evaluation
+- Business storytelling with data
+
+---
+
+## Repository Structure
+
+- `notebooks/` – End-to-end analytics notebook
+- `sql/` – Table creation and database scripts
+- `docs/` – ER diagram and visuals
+
+---
+
+## Data Source
+
+OLIST Brazilian E-commerce Public Dataset (Kaggle)
