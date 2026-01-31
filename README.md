@@ -1,35 +1,34 @@
-# Brasimart E-Commerce Analytics (Azure SQL + Python)
+# Brasimart E-Commerce Analytics
 
 ## Overview
+This project demonstrates an end-to-end e-commerce analytics workflow using the public OLIST Brazilian e-commerce dataset.  
+Transactional data was modeled and loaded into Azure SQL and analyzed using Python to generate insights on revenue performance, customer behavior, retention, and operational efficiency.
 
-This project simulates a production-grade analytics workflow using the public OLIST Brazilian e-commerce dataset. Transactional data was loaded into Azure SQL and analyzed using Python to generate business insights across revenue performance, customer behavior, retention, and operational efficiency.
-
-The objective was to transform raw transactional data into actionable business intelligence using a structured analytics pipeline.
+The goal of this project was to simulate a production-grade analytics pipeline and translate raw transactional data into actionable business insights.
 
 ---
 
 ## Architecture
+**Data Source → Azure SQL → Python Analytics → Business Insights**
 
-Data Source → Azure SQL Database → Python (Pandas) → Analytics Fact Table → Business Insights
-
-- Data Storage: Azure SQL
-- Authentication: Microsoft Entra ID (token-based via Azure CLI)
-- Analytics & Modeling: Python (Pandas, NumPy)
-- Visualization: Matplotlib, Seaborn
-- Version Control: Git & GitHub
+- Data Storage: Azure SQL Database  
+- Authentication: Microsoft Entra ID (token-based via Azure CLI)  
+- Analytics & Modeling: Python (Pandas, NumPy)  
+- Visualization: Matplotlib, Seaborn  
+- Version Control: Git & GitHub  
 
 ---
 
 ## Key Analyses
 
 ### Revenue Trend Analysis
-- Evaluated monthly revenue growth patterns
-- Identified seasonality and revenue expansion trends
+- Evaluated monthly revenue growth and seasonality
+- Identified sustained revenue expansion patterns
 
 ### Customer Lifetime Value (CLV)
 - Calculated lifetime spend per customer
 - Identified strong revenue concentration among top customers
-- Demonstrated Pareto-like revenue distribution
+- Observed Pareto-like revenue distribution
 
 ### Cohort Retention Analysis
 - Grouped customers by first purchase month
@@ -37,51 +36,49 @@ Data Source → Azure SQL Database → Python (Pandas) → Analytics Fact Table 
 - Identified limited repeat purchase behavior
 
 ### RFM Segmentation
-- Segmented customers by Recency, Frequency, and Monetary value
-- Identified high-value and at-risk segments
-- Quantified behavioral differences across segments
+- Segmented customers based on Recency, Frequency, and Monetary value
+- Identified high-value and at-risk customer segments
 
 ### Operational Performance
-- Measured delivery delay relative to estimated delivery dates
-- Found majority of deliveries occurred earlier than promised
-- Identified satisfaction impact of late deliveries
+- Analyzed delivery performance relative to estimated delivery dates
+- Found most orders delivered earlier than promised
+- Quantified customer satisfaction impact of late deliveries
 
 ### Product & Category Insights
 - Analyzed revenue concentration across product categories
-- Compared category-level revenue vs customer satisfaction
-- Highlighted potential optimization opportunities
+- Compared category-level revenue and customer satisfaction
+- Identified potential optimization opportunities in high-volume segments
 
 ---
 
 ## Business Insights
-
-- Revenue is highly concentrated among a small subset of customers.
+- Revenue is driven by a small subset of high-value customers.
 - Customer retention declines sharply after initial purchase.
-- Delivery reliability significantly influences customer satisfaction.
+- Delivery reliability has a measurable impact on customer satisfaction.
 - High-revenue categories do not always align with highest review scores.
-- Strategic retention of high-value segments could materially improve profitability.
-
----
-
-## Skills Demonstrated
-
-- SQL data modeling and table design
-- Secure Azure SQL connectivity using Microsoft Entra authentication
-- Fact table construction and feature engineering
-- Customer analytics (CLV, RFM, Cohort analysis)
-- Operational performance evaluation
-- Business storytelling with data
+- Targeted retention and operational improvements could significantly enhance profitability.
 
 ---
 
 ## Repository Structure
 
-- `notebooks/` – End-to-end analytics notebook
-- `sql/` – Table creation and database scripts
-- `docs/` – ER diagram and visuals
+- `notebooks/` – End-to-end analytics notebook  
+- `schema/` – Database schema and table creation scripts  
+- `sql/` – Analytical SQL queries  
+- `docs/` – Diagrams and visual assets  
+- `data/` – Processed data outputs (raw source data excluded)  
 
 ---
 
 ## Data Source
-
 OLIST Brazilian E-commerce Public Dataset (Kaggle)
+
+---
+
+## Skills Demonstrated
+- SQL data modeling and relational design  
+- Secure Azure SQL connectivity using Microsoft Entra authentication  
+- Analytics fact table construction  
+- Customer analytics (CLV, RFM, Cohort Analysis)  
+- Operational and product performance analysis  
+- Business storytelling with data  
