@@ -75,6 +75,16 @@ OLIST Brazilian E-commerce Public Dataset (Kaggle)
 
 ---
 
+## Sample Visualizations
+
+### Monthly Revenue Trend
+![Monthly Revenue Trend](schema/trend.png)
+
+### Delivery Performance and Customer Satisfaction
+![Delivery Delay vs Review Score](schema/DelDelay.png)
+
+---
+
 ## Skills Demonstrated
 - SQL data modeling and relational design  
 - Secure Azure SQL connectivity using Microsoft Entra authentication  
